@@ -32,3 +32,13 @@ INTERSECT ALL
 )
 EXCEPT ALL
 (SELECT first_name FROM customer);
+
+
+--Önce isimlerin son 3 karakterine göre sıralama.
+
+--Ardından, son 3 karakter aynıysa, ID'ye göre artan sıralama.
+
+SELECT Name
+FROM STUDENTS
+WHERE Marks > 75
+ORDER BY RIGHT(Name, 3), ID;
